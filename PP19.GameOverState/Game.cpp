@@ -15,10 +15,6 @@ bool Game::init(const char*title, int xpos, int ypos,
 		{
 			m_pRenderer = SDL_CreateRenderer(m_pWindow, -1, 0);
 		}
-		if (!TheTextureManager::Instance()->load("Assets/animate-alpha.png", "animate", m_pRenderer))
-		{
-			return false;
-		}
 
 		m_gameObjects.push_back(new Player(new LoaderParams(100,100,128,82,"animate")));
 		m_gameObjects.push_back(new Enemy(new LoaderParams(300, 300, 128, 82, "animate")));
